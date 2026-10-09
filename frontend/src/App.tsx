@@ -1,4 +1,4 @@
-﻿
+
 import { useState, useEffect } from 'react';
 import { ArrowRight, BarChart3, CheckCircle2, ChevronRight, CopyPlus, FileText, Gauge, LayoutDashboard, LogIn, Menu, MessageSquareText, ShieldCheck, Sparkles, Target, TrendingUp, Zap, Lock, CreditCard, AlertTriangle, RefreshCw, Trash2, Check } from 'lucide-react';
 import { Link, NavLink, Route, Routes, useNavigate, useParams } from 'react-router-dom';
@@ -10,10 +10,10 @@ import { getAnalysesHistory, saveAnalysisToHistory, getAnalysisById, clearAnalys
 const primaryNav = [
   { label: 'Dashboard', to: '/dashboard', icon: LayoutDashboard },
   { label: 'Analisar', to: '/analisar', icon: Sparkles },
-  { label: 'AnÃ¡lises', to: '/analises', icon: FileText },
+  { label: 'Análises', to: '/analises', icon: FileText },
   { label: 'Campanhas', to: '/campanhas', icon: BarChart3 },
   { label: 'Resultados', to: '/resultados', icon: TrendingUp },
-  { label: 'OtimizaÃ§Ãµes', to: '/otimizacoes', icon: CopyPlus },
+  { label: 'Otimizações', to: '/otimizacoes', icon: CopyPlus },
   { label: 'Planos', to: '/planos', icon: CreditCard }
 ];
 
@@ -51,14 +51,14 @@ function LandingPage() {
           </Link>
           <nav className="hidden items-center gap-8 text-sm text-zinc-300 md:flex">
             <a href="#como-funciona">Como funciona</a>
-            <a href="#analise">AnÃ¡lise de anÃºncios</a>
-            <a href="#otimizacao">OtimizaÃ§Ã£o</a>
+            <a href="#analise">Análise de anúncios</a>
+            <a href="#otimizacao">Otimização</a>
             <a href="#planos">Planos</a>
             <a href="#faq">FAQ</a>
           </nav>
           <div className="flex items-center gap-3">
             <Link to="/login" className="hidden rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-200 md:inline-flex">Entrar</Link>
-            <Link to="/register" className="inline-flex rounded-full bg-violet-600 px-5 py-2.5 text-sm font-medium text-white shadow-soft hover:bg-violet-500">ComeÃ§ar grÃ¡tis</Link>
+            <Link to="/register" className="inline-flex rounded-full bg-violet-600 px-5 py-2.5 text-sm font-medium text-white shadow-soft hover:bg-violet-500">Come�ar gr�tis</Link>
           </div>
         </div>
       </header>
@@ -66,18 +66,18 @@ function LandingPage() {
       <main>
         <section className="mx-auto grid max-w-7xl gap-12 px-6 pb-20 pt-16 md:grid-cols-2 md:pt-24">
           <div>
-            <span className="inline-flex items-center rounded-full border border-violet-500/30 bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-200">AnÃ¡lise e otimizaÃ§Ã£o de anÃºncios</span>
-            <h1 className="mt-6 text-4xl font-bold tracking-tight text-white md:text-6xl">Descubra os pontos fracos do seu anÃºncio antes de gastar dinheiro.</h1>
+            <span className="inline-flex items-center rounded-full border border-violet-500/30 bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-200">Análise e otimização de anúncios</span>
+            <h1 className="mt-6 text-4xl font-bold tracking-tight text-white md:text-6xl">Descubra os pontos fracos do seu anúncio antes de gastar dinheiro.</h1>
             <p className="mt-6 max-w-xl text-lg text-zinc-300">
-              Analise seu criativo, copy, oferta e pÃ¡gina de vendas com IA e receba sugestÃµes para melhorar sua campanha antes de publicÃ¡-la.
+              Analise seu criativo, copy, oferta e página de vendas com IA e receba sugestões para melhorar sua campanha antes de publicá-la.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Link to="/register" className="inline-flex items-center justify-center gap-2 rounded-full bg-violet-600 px-6 py-3 font-medium text-white shadow-soft hover:bg-violet-500">ComeÃ§ar grÃ¡tis <ArrowRight size={18} /></Link>
+              <Link to="/register" className="inline-flex items-center justify-center gap-2 rounded-full bg-violet-600 px-6 py-3 font-medium text-white shadow-soft hover:bg-violet-500">Come�ar gr�tis <ArrowRight size={18} /></Link>
               <a href="#como-funciona" className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 font-medium text-zinc-100">Ver como funciona</a>
             </div>
             <div className="mt-10 flex items-center gap-8 text-sm text-zinc-400">
-              <div><span className="font-semibold text-white">184</span> anÃºncios avaliados</div>
-              <div><span className="font-semibold text-white">82/100</span> score mÃ©dio</div>
+              <div><span className="font-semibold text-white">184</span> anúncios avaliados</div>
+              <div><span className="font-semibold text-white">82/100</span> score médio</div>
             </div>
           </div>
           <div className="relative">
@@ -86,15 +86,15 @@ function LandingPage() {
                 <div className="flex items-center justify-between border-b border-white/10 pb-4">
                   <div>
                     <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">Campanha</p>
-                    <h3 className="mt-2 text-xl font-semibold">LanÃ§amento SaaS B2B</h3>
+                    <h3 className="mt-2 text-xl font-semibold">Lançamento SaaS B2B</h3>
                   </div>
                   <div className="rounded-full bg-emerald-500/10 px-3 py-1 text-sm font-medium text-emerald-400">Score 82/100</div>
                 </div>
                 <div className="mt-6 space-y-4">
                   <div className="rounded-2xl bg-zinc-800/70 p-4">
                     <div className="flex items-center justify-between text-sm text-zinc-300">
-                      <span>Risco de polÃ­tica</span>
-                      <span className="text-amber-300">Requer revisÃ£o</span>
+                      <span>Risco de política</span>
+                      <span className="text-amber-300">Requer revisão</span>
                     </div>
                     <div className="mt-3 h-2 overflow-hidden rounded-full bg-zinc-700">
                       <div className="h-full w-2/3 rounded-full bg-amber-400" />
@@ -103,7 +103,7 @@ function LandingPage() {
                   <div className="grid gap-3 sm:grid-cols-2">
                     <MetricBox label="CTR estimado" value="1,5% - 2,4%" />
                     <MetricBox label="CPA estimado" value="US$ 12 - US$ 22" />
-                    <MetricBox label="ConversÃ£o" value="2% - 4%" />
+                    <MetricBox label="Conversão" value="2% - 4%" />
                     <MetricBox label="CPC" value="US$ 0,70 - US$ 1,10" />
                   </div>
                 </div>
@@ -113,26 +113,26 @@ function LandingPage() {
         </section>
 
         <section id="como-funciona" className="mx-auto max-w-7xl px-6 py-16">
-          <SectionHeader eyebrow="Como funciona" title="De criativo bruto a campanha melhor preparada" description="A IA avalia copy, criativo, oferta e landing page para te dar sinais claros de risco, oportunidade e priorizaÃ§Ã£o." />
+          <SectionHeader eyebrow="Como funciona" title="De criativo bruto a campanha melhor preparada" description="A IA avalia copy, criativo, oferta e landing page para te dar sinais claros de risco, oportunidade e priorização." />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <FeatureCard icon={<Sparkles size={20} />} title="1. Analise" text="VocÃª envia o anÃºncio e a IA avalia criativo, oferta, pÃºblico, proposta e risco de polÃ­tica." />
-            <FeatureCard icon={<Target size={20} />} title="2. Entenda" text="Receba um score, explicaÃ§Ãµes e recomendaÃ§Ãµes para melhorar o conjunto antes do lanÃ§amento." />
-            <FeatureCard icon={<TrendingUp size={20} />} title="3. Otimize" text="Gere versÃµes A/B e compare previsÃµes contra resultados reais depois da campanha." />
+            <FeatureCard icon={<Sparkles size={20} />} title="1. Analise" text="Você envia o anúncio e a IA avalia criativo, oferta, público, proposta e risco de política." />
+            <FeatureCard icon={<Target size={20} />} title="2. Entenda" text="Receba um score, explicações e recomendações para melhorar o conjunto antes do lançamento." />
+            <FeatureCard icon={<TrendingUp size={20} />} title="3. Otimize" text="Gere versões A/B e compare previsões contra resultados reais depois da campanha." />
           </div>
         </section>
 
         <section id="analise" className="bg-[#101014] py-16">
           <div className="mx-auto max-w-7xl px-6">
-            <SectionHeader eyebrow="AnÃ¡lise de anÃºncios" title="A IA considera cada peÃ§a do funil" description="NÃ£o apenas o texto: a plataforma olha tambÃ©m para landing page, pÃºblico, oferta e pontos de abandono." />
+            <SectionHeader eyebrow="Análise de anúncios" title="A IA considera cada peça do funil" description="Não apenas o texto: a plataforma olha também para landing page, público, oferta e pontos de abandono." />
             <div className="mt-8 grid gap-6 lg:grid-cols-2">
-              <ChecklistCard title="O que a anÃ¡lise avalia" items={['Criativo', 'Copy', 'Oferta', 'PÃºblico', 'Landing page', 'Risco de polÃ­tica']} />
-              <ChecklistCard title="SaÃ­das da plataforma" items={['Score 0-100', 'SugestÃµes aplicÃ¡veis', 'PrevisÃµes com intervalo', 'Riscos e recomendaÃ§Ãµes']} />
+              <ChecklistCard title="O que a análise avalia" items={['Criativo', 'Copy', 'Oferta', 'Público', 'Landing page', 'Risco de política']} />
+              <ChecklistCard title="Saídas da plataforma" items={['Score 0-100', 'Sugestões aplicáveis', 'Previsões com intervalo', 'Riscos e recomendações']} />
             </div>
           </div>
         </section>
 
         <section id="otimizacao" className="mx-auto max-w-7xl px-6 py-16">
-          <SectionHeader eyebrow="OtimizaÃ§Ã£o com IA" title="Gere alternativas sem perder velocidade" description="Crie versÃµes com foco em conversÃ£o, benefÃ­cio, curiosidade ou uma abordagem mais conservadora em relaÃ§Ã£o Ã s polÃ­ticas." />
+          <SectionHeader eyebrow="Otimização com IA" title="Gere alternativas sem perder velocidade" description="Crie versões com foco em conversão, benefício, curiosidade ou uma abordagem mais conservadora em relação às políticas." />
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {optimizationVariants.map((variant) => (
               <div key={variant.id} className="rounded-2xl border border-white/10 bg-zinc-900 p-5">
@@ -149,17 +149,17 @@ function LandingPage() {
 
         <section className="bg-[#101014] py-16">
           <div className="mx-auto max-w-7xl px-6">
-            <SectionHeader eyebrow="PrevisÃ£o x resultado real" title="Compare estimativa com realidade" description="Depois da campanha, vocÃª registra o resultado e o sistema interpreta a diferenÃ§a entre previsÃ£o e execuÃ§Ã£o." />
+            <SectionHeader eyebrow="Previsão x resultado real" title="Compare estimativa com realidade" description="Depois da campanha, você registra o resultado e o sistema interpreta a diferença entre previsão e execução." />
             <div className="mt-10 grid gap-5 md:grid-cols-3">
               <TrendCard title="CTR" predicted="2,1%" real="2,8%" />
               <TrendCard title="CPC" predicted="US$ 0,90" real="US$ 0,64" />
-              <TrendCard title="ConversÃ£o" predicted="3,2%" real="4,1%" />
+              <TrendCard title="Conversão" predicted="3,2%" real="4,1%" />
             </div>
           </div>
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-16">
-          <SectionHeader eyebrow="HistÃ³rico de campanhas" title="Aprenda com seus testes" description="PadrÃµes aparecem quando hÃ¡ dados suficientes: headline com benefÃ­cio direto, CTA mais claro e criativos com foco em dor." />
+          <SectionHeader eyebrow="Histórico de campanhas" title="Aprenda com seus testes" description="Padrões aparecem quando há dados suficientes: headline com benefício direto, CTA mais claro e criativos com foco em dor." />
           <div className="mt-8 overflow-hidden rounded-2xl border border-white/10">
             <table className="min-w-full divide-y divide-white/10 text-left text-sm text-zinc-300">
               <thead className="bg-white/5 text-zinc-200">
@@ -186,14 +186,14 @@ function LandingPage() {
 
         <section id="planos" className="bg-[#101014] py-16">
           <div className="mx-auto max-w-7xl px-6">
-            <SectionHeader eyebrow="Planos" title="Escolha o nÃ­vel ideal para sua operaÃ§Ã£o" description="Controle de limites e cobranÃ§a no backend, com acesso por assinatura do usuÃ¡rio." />
+            <SectionHeader eyebrow="Planos" title="Escolha o nível ideal para sua operação" description="Controle de limites e cobrança no backend, com acesso por assinatura do usuário." />
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {planOptions.map((plan) => (
                 <div key={plan.name} className={`rounded-2xl border p-5 ${plan.featured ? 'border-violet-500 bg-violet-500/5 shadow-soft' : 'border-white/10 bg-zinc-900'}`}>
                   <p className="text-sm uppercase tracking-[0.18em] text-zinc-400">{plan.name}</p>
                   <div className="mt-2 flex items-end gap-2">
                     <span className="text-3xl font-bold text-white">{plan.price}</span>
-                    <span className="pb-1 text-sm text-zinc-400">/ mÃªs</span>
+                    <span className="pb-1 text-sm text-zinc-400">/ mês</span>
                   </div>
                   <p className="mt-4 text-sm text-zinc-300">{plan.description}</p>
                   <ul className="mt-5 space-y-3 text-sm text-zinc-200">
@@ -209,11 +209,11 @@ function LandingPage() {
         </section>
 
         <section id="faq" className="mx-auto max-w-7xl px-6 py-16">
-          <SectionHeader eyebrow="FAQ" title="Perguntas frequentes" description="Tudo pensado para ser transparente e coerente com o modelo de anÃ¡lise e previsÃ£o do produto." />
+          <SectionHeader eyebrow="FAQ" title="Perguntas frequentes" description="Tudo pensado para ser transparente e coerente com o modelo de análise e previsão do produto." />
           <div className="mt-8 space-y-4">
-            <FaqItem question="O SocialDash promete aprovaÃ§Ã£o pela Meta?" answer="NÃ£o. A plataforma identifica riscos, recomenda ajustes e apresenta estimativas baseadas no contexto informado e no histÃ³rico disponÃ­vel." />
-            <FaqItem question="Como funciona a previsÃ£o?" answer="As previsÃµes surgem em intervalos e devem ser vistas como estimativas, nÃ£o garantias de conversÃ£o." />
-            <FaqItem question="Posso usar o serviÃ§o para campanhas de vÃ¡rios mercados?" answer="Sim. A anÃ¡lise pode ser feita por paÃ­s, pÃºblico, oferta e criativo, alÃ©m de comparar resultado real com previsÃ£o." />
+            <FaqItem question="O SocialDash promete aprovação pela Meta?" answer="Não. A plataforma identifica riscos, recomenda ajustes e apresenta estimativas baseadas no contexto informado e no histórico disponível." />
+            <FaqItem question="Como funciona a previsão?" answer="As previsões surgem em intervalos e devem ser vistas como estimativas, não garantias de conversão." />
+            <FaqItem question="Posso usar o serviço para campanhas de vários mercados?" answer="Sim. A análise pode ser feita por país, público, oferta e criativo, além de comparar resultado real com previsão." />
           </div>
         </section>
       </main>
@@ -222,13 +222,13 @@ function LandingPage() {
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2 text-lg font-semibold"><span className="flex h-7 w-7 items-center justify-center rounded-lg bg-violet-600/20 text-violet-300 ring-1 ring-violet-500/30 text-sm">S</span> SocialDash</div>
-            <p className="mt-4 max-w-sm text-sm text-zinc-400">Plataforma de anÃ¡lise e otimizaÃ§Ã£o de anÃºncios para reduzir risco antes do lanÃ§amento.</p>
+            <p className="mt-4 max-w-sm text-sm text-zinc-400">Plataforma de análise e otimização de anúncios para reduzir risco antes do lançamento.</p>
           </div>
           <div>
-            <p className="text-sm font-semibold text-zinc-200">NavegaÃ§Ã£o</p>
+            <p className="text-sm font-semibold text-zinc-200">Navegação</p>
             <div className="mt-4 space-y-2 text-sm text-zinc-400">
               <div><a href="#como-funciona">Como funciona</a></div>
-              <div><a href="#analise">AnÃ¡lise</a></div>
+              <div><a href="#analise">Análise</a></div>
               <div><a href="#planos">Planos</a></div>
             </div>
           </div>
@@ -251,7 +251,7 @@ function AuthPage({ mode }: { mode: 'login' | 'register' | 'forgot' }) {
   const [authMessage, setAuthMessage] = useState('');
   const [authBusy, setAuthBusy] = useState(false);
   const title = mode === 'login' ? 'Entrar' : mode === 'register' ? 'Criar conta' : 'Recuperar senha';
-  const subtitle = mode === 'login' ? 'Acesse seu painel, anÃ¡lises e campanhas.' : mode === 'register' ? 'Cadastre-se para comeÃ§ar a analisar anÃºncios.' : 'Enviamos instruÃ§Ãµes para confirmar sua conta.';
+  const subtitle = mode === 'login' ? 'Acesse seu painel, análises e campanhas.' : mode === 'register' ? 'Cadastre-se para começar a analisar anúncios.' : 'Enviamos instruções para confirmar sua conta.';
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-[#09090B] px-6 py-12 text-white">
@@ -272,7 +272,7 @@ function AuthPage({ mode }: { mode: 'login' | 'register' | 'forgot' }) {
             const response = mode === 'login' ? await supabase.auth.signInWithPassword({ email, password }) : mode === 'register' ? await supabase.auth.signUp({ email, password }) : await supabase.auth.resetPasswordForEmail(email);
             if (response.error) throw response.error;
             if (mode === 'login') navigate('/dashboard'); else setAuthMessage('Confira seu e-mail para continuar.');
-          } catch (error) { setAuthError(error instanceof Error ? error.message : 'Falha na autenticaÃ§Ã£o.'); }
+          } catch (error) { setAuthError(error instanceof Error ? error.message : 'Falha na autenticação.'); }
           finally { setAuthBusy(false); }
         }}>
           {(
@@ -284,7 +284,7 @@ function AuthPage({ mode }: { mode: 'login' | 'register' | 'forgot' }) {
           {mode !== 'forgot' && (
             <div className="space-y-2">
               <label className="text-sm text-zinc-300">Senha</label>
-              <input name="password" required minLength={6} type="password" className="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2.5 text-white outline-none placeholder:text-zinc-500 focus:border-violet-500" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" />
+              <input name="password" required minLength={6} type="password" className="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2.5 text-white outline-none placeholder:text-zinc-500 focus:border-violet-500" placeholder="••••••••" />
             </div>
           )}
           {mode === 'register' && (
@@ -298,7 +298,7 @@ function AuthPage({ mode }: { mode: 'login' | 'register' | 'forgot' }) {
           {authMessage && <p className="text-sm text-green-400">{authMessage}</p>}
         </form>
         <div className="mt-5 text-center text-sm text-zinc-400">
-          {mode === 'login' ? <Link to="/forgot-password" className="text-violet-300">Esqueci a senha</Link> : mode === 'register' ? <Link to="/login" className="text-violet-300">JÃ¡ tenho conta</Link> : <Link to="/login" className="text-violet-300">Voltar ao login</Link>}
+          {mode === 'login' ? <Link to="/forgot-password" className="text-violet-300">Esqueci a senha</Link> : mode === 'register' ? <Link to="/login" className="text-violet-300">Já tenho conta</Link> : <Link to="/login" className="text-violet-300">Voltar ao login</Link>}
         </div>
       </div>
     </div>
@@ -325,10 +325,10 @@ function DashboardPage() {
   const avgScore = totalAnalyses > 0 ? Math.round(history.reduce((acc, curr) => acc + curr.score, 0) / totalAnalyses) : 0;
 
   const dynamicStats = [
-    { label: 'AnÃºncios analisados', value: String(totalAnalyses), trend: '+100%' },
-    { label: 'Score mÃ©dio', value: `${avgScore}/100`, trend: avgScore >= 80 ? '+8 pts' : '+4 pts' },
+    { label: 'Anúncios analisados', value: String(totalAnalyses), trend: '+100%' },
+    { label: 'Score médio', value: `${avgScore}/100`, trend: avgScore >= 80 ? '+8 pts' : '+4 pts' },
     { label: 'Campanhas ativas', value: String(Math.max(1, Math.ceil(totalAnalyses / 2))), trend: '+2' },
-    { label: 'CTR mÃ©dio previsto', value: '2.4%', trend: '+0.5%' }
+    { label: 'CTR médio previsto', value: '2.4%', trend: '+0.5%' }
   ];
 
   return (
@@ -336,9 +336,9 @@ function DashboardPage() {
       <div className="mb-6 flex items-center justify-between">
         <div>
           <p className="text-sm uppercase tracking-[0.18em] text-violet-300">Dashboard</p>
-          <h1 className="mt-2 text-3xl font-semibold text-white">Resumo da operaÃ§Ã£o</h1>
+          <h1 className="mt-2 text-3xl font-semibold text-white">Resumo da operação</h1>
         </div>
-        <Link to="/analisar" className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-violet-500">Analisar novo anÃºncio</Link>
+        <Link to="/analisar" className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-violet-500">Analisar novo anúncio</Link>
       </div>
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
         {dynamicStats.map((stat) => (
@@ -355,7 +355,7 @@ function DashboardPage() {
       <div className="mt-8 grid gap-6 xl:grid-cols-[1.4fr_0.8fr]">
         <div className="rounded-2xl border border-white/10 bg-zinc-900 p-6">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold text-white">Ãšltimas anÃ¡lises</h2>
+            <h2 className="text-xl font-semibold text-white">Últimas análises</h2>
             <Link to="/analises" className="text-sm text-violet-300">Ver todas ({history.length})</Link>
           </div>
           <div className="mt-6 space-y-4">
@@ -364,7 +364,7 @@ function DashboardPage() {
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <h3 className="font-medium text-white">{analysis.name}</h3>
-                    <p className="mt-1 text-sm text-zinc-400">{analysis.product} â€¢ {analysis.country}</p>
+                    <p className="mt-1 text-sm text-zinc-400">{analysis.product} • {analysis.country}</p>
                   </div>
                   <div className="text-right">
                     <p className="text-sm text-violet-300">Score</p>
@@ -383,7 +383,7 @@ function DashboardPage() {
             <RiskRow label="Copy" value={80} tone="good" />
             <RiskRow label="Oferta" value={74} tone="medium" />
             <RiskRow label="Landing page" value={68} tone="medium" />
-            <RiskRow label="PolÃ­tica" value={66} tone="risk" />
+            <RiskRow label="Política" value={66} tone="risk" />
           </div>
         </div>
       </div>
@@ -399,7 +399,7 @@ function AnalyzePage() {
     price: '',
     country: 'Brasil',
     audience: '',
-    goal: 'ConversÃ£o',
+    goal: 'Conversão',
     dailyBudget: '',
     landingPageUrl: '',
     primaryText: '',
@@ -413,7 +413,7 @@ function AnalyzePage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.adName || !form.product || !form.headline || !form.primaryText) {
-      setError('Por favor preencha os campos obrigatÃ³rios (Nome, Produto, TÃ­tulo e Texto Principal).');
+      setError('Por favor preencha os campos obrigatórios (Nome, Produto, Título e Texto Principal).');
       return;
     }
     setLoading(true);
@@ -429,8 +429,8 @@ function AnalyzePage() {
           product: form.product,
           price: form.price || 'R$ 0',
           country: form.country || 'Brasil',
-          audience: form.audience || 'PÃºblico Geral',
-          goal: form.goal || 'ConversÃ£o',
+          audience: form.audience || 'Público Geral',
+          goal: form.goal || 'Conversão',
           dailyBudget: form.dailyBudget || 'R$ 50',
           headline: form.headline,
           primaryText: form.primaryText,
@@ -442,7 +442,7 @@ function AnalyzePage() {
 
       const data = await res.json();
       if (!res.ok) {
-        throw new Error(data.message || 'Erro ao realizar anÃ¡lise da IA');
+        throw new Error(data.message || 'Erro ao realizar análise da IA');
       }
 
       const newAnalysis: AnalysisResult = {
@@ -456,7 +456,7 @@ function AnalyzePage() {
         createdAt: new Date().toISOString().split('T')[0],
         objective: form.goal,
         summary: data.summary,
-        risk: data.classification?.includes('Risco') ? 'Alto Risco' : 'AtenÃ§Ã£o Requerida',
+        risk: data.classification?.includes('Risco') ? 'Alto Risco' : 'Atenção Requerida',
         predictions: {
           ctr: data.predictions?.ctrRange || '1.8% - 2.5%',
           cpc: data.predictions?.cpcRange || 'R$ 0.90 - R$ 1.50',
@@ -471,7 +471,7 @@ function AnalyzePage() {
           { label: 'Criativo', value: 85, tone: 'good' },
           { label: 'Copy', value: 80, tone: 'good' },
           { label: 'Oferta', value: 78, tone: 'medium' },
-          { label: 'PÃºblico', value: 82, tone: 'good' }
+          { label: 'Público', value: 82, tone: 'good' }
         ],
         policyIssues: data.policyIssues,
         risks: data.risks,
@@ -484,7 +484,7 @@ function AnalyzePage() {
       saveAnalysisToHistory(newAnalysis);
       navigate(`/analises/${newAnalysis.id}`);
     } catch (err: any) {
-      setError(err.message || 'Erro ao comunicar com o serviÃ§o de IA.');
+      setError(err.message || 'Erro ao comunicar com o serviço de IA.');
     } finally {
       setLoading(false);
     }
@@ -493,8 +493,8 @@ function AnalyzePage() {
   return (
     <AppShell>
       <div className="mb-6">
-        <p className="text-sm uppercase tracking-[0.18em] text-violet-300">Nova anÃ¡lise</p>
-        <h1 className="mt-2 text-3xl font-semibold text-white">Analisar anÃºncio com IA</h1>
+        <p className="text-sm uppercase tracking-[0.18em] text-violet-300">Nova análise</p>
+        <h1 className="mt-2 text-3xl font-semibold text-white">Analisar anúncio com IA</h1>
       </div>
       <form onSubmit={handleSubmit} className="space-y-6 rounded-2xl border border-white/10 bg-zinc-900 p-6">
         {error && (
@@ -505,39 +505,39 @@ function AnalyzePage() {
         )}
         <div className="grid gap-5 md:grid-cols-2">
           <div>
-            <label className="block text-xs font-medium text-zinc-300 mb-1">Nome do anÃºncio *</label>
+            <label className="block text-xs font-medium text-zinc-300 mb-1">Nome do anúncio *</label>
             <input
               type="text"
               required
-              placeholder="Ex: Campanha LanÃ§amento SaaS"
+              placeholder="Ex: Campanha Lançamento SaaS"
               value={form.adName}
               onChange={(e) => setForm({ ...form, adName: e.target.value })}
               className="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2.5 text-white outline-none placeholder:text-zinc-500 focus:border-violet-500 text-sm"
             />
           </div>
           <div>
-            <label className="block text-xs font-medium text-zinc-300 mb-1">Produto ou serviÃ§o *</label>
+            <label className="block text-xs font-medium text-zinc-300 mb-1">Produto ou serviço *</label>
             <input
               type="text"
               required
-              placeholder="Ex: Software de automaÃ§Ã£o de marketing"
+              placeholder="Ex: Software de automação de marketing"
               value={form.product}
               onChange={(e) => setForm({ ...form, product: e.target.value })}
               className="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2.5 text-white outline-none placeholder:text-zinc-500 focus:border-violet-500 text-sm"
             />
           </div>
           <div>
-            <label className="block text-xs font-medium text-zinc-300 mb-1">PreÃ§o</label>
+            <label className="block text-xs font-medium text-zinc-300 mb-1">Preço</label>
             <input
               type="text"
-              placeholder="Ex: R$ 49/mÃªs"
+              placeholder="Ex: R$ 49/mês"
               value={form.price}
               onChange={(e) => setForm({ ...form, price: e.target.value })}
               className="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2.5 text-white outline-none placeholder:text-zinc-500 focus:border-violet-500 text-sm"
             />
           </div>
           <div>
-            <label className="block text-xs font-medium text-zinc-300 mb-1">PaÃ­s</label>
+            <label className="block text-xs font-medium text-zinc-300 mb-1">País</label>
             <input
               type="text"
               placeholder="Ex: Brasil"
@@ -547,10 +547,10 @@ function AnalyzePage() {
             />
           </div>
           <div>
-            <label className="block text-xs font-medium text-zinc-300 mb-1">PÃºblico-alvo</label>
+            <label className="block text-xs font-medium text-zinc-300 mb-1">Público-alvo</label>
             <input
               type="text"
-              placeholder="Ex: Gestores de trÃ¡fego e empreendedores"
+              placeholder="Ex: Gestores de tráfego e empreendedores"
               value={form.audience}
               onChange={(e) => setForm({ ...form, audience: e.target.value })}
               className="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2.5 text-white outline-none placeholder:text-zinc-500 focus:border-violet-500 text-sm"
@@ -560,14 +560,14 @@ function AnalyzePage() {
             <label className="block text-xs font-medium text-zinc-300 mb-1">Objetivo da campanha</label>
             <input
               type="text"
-              placeholder="Ex: ConversÃ£o / Vendas"
+              placeholder="Ex: Conversão / Vendas"
               value={form.goal}
               onChange={(e) => setForm({ ...form, goal: e.target.value })}
               className="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2.5 text-white outline-none placeholder:text-zinc-500 focus:border-violet-500 text-sm"
             />
           </div>
           <div>
-            <label className="block text-xs font-medium text-zinc-300 mb-1">OrÃ§amento diÃ¡rio</label>
+            <label className="block text-xs font-medium text-zinc-300 mb-1">Orçamento diário</label>
             <input
               type="text"
               placeholder="Ex: R$ 100/dia"
@@ -587,21 +587,21 @@ function AnalyzePage() {
             />
           </div>
           <div>
-            <label className="block text-xs font-medium text-zinc-300 mb-1">TÃ­tulo (Headline) *</label>
+            <label className="block text-xs font-medium text-zinc-300 mb-1">Título (Headline) *</label>
             <input
               type="text"
               required
-              placeholder="Ex: Automatize sua gestÃ£o sem retrabalho"
+              placeholder="Ex: Automatize sua gestão sem retrabalho"
               value={form.headline}
               onChange={(e) => setForm({ ...form, headline: e.target.value })}
               className="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2.5 text-white outline-none placeholder:text-zinc-500 focus:border-violet-500 text-sm"
             />
           </div>
           <div>
-            <label className="block text-xs font-medium text-zinc-300 mb-1">Chamada para AÃ§Ã£o (CTA)</label>
+            <label className="block text-xs font-medium text-zinc-300 mb-1">Chamada para Ação (CTA)</label>
             <input
               type="text"
-              placeholder="Ex: Saiba mais / Garanta jÃ¡"
+              placeholder="Ex: Saiba mais / Garanta já"
               value={form.cta}
               onChange={(e) => setForm({ ...form, cta: e.target.value })}
               className="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2.5 text-white outline-none placeholder:text-zinc-500 focus:border-violet-500 text-sm"
@@ -614,7 +614,7 @@ function AnalyzePage() {
           <textarea
             required
             rows={3}
-            placeholder="Cole aqui o texto principal do anÃºncio..."
+            placeholder="Cole aqui o texto principal do anúncio..."
             value={form.primaryText}
             onChange={(e) => setForm({ ...form, primaryText: e.target.value })}
             className="w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2.5 text-white outline-none placeholder:text-zinc-500 focus:border-violet-500 text-sm"
@@ -635,7 +635,7 @@ function AnalyzePage() {
             ) : (
               <>
                 <Sparkles size={18} />
-                Enviar para anÃ¡lise de IA
+                Enviar para análise de IA
               </>
             )}
           </button>
@@ -653,7 +653,7 @@ function AnalysesPage() {
   }, []);
 
   const clearHistory = () => {
-    if (confirm('Deseja realmente limpar seu histÃ³rico de anÃ¡lises?')) {
+    if (confirm('Deseja realmente limpar seu histórico de análises?')) {
       clearAnalysesHistory();
       setAnalyses(getAnalysesHistory());
     }
@@ -662,13 +662,13 @@ function AnalysesPage() {
   return (
     <AppShell>
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-semibold text-white">Minhas AnÃ¡lises</h1>
+        <h1 className="text-3xl font-semibold text-white">Minhas Análises</h1>
         <div className="flex gap-3">
           <button onClick={clearHistory} className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-zinc-800 px-4 py-2 text-xs font-medium text-zinc-300 hover:bg-zinc-700">
-            <Trash2 size={14} /> Limpar histÃ³rico
+            <Trash2 size={14} /> Limpar histórico
           </button>
           <Link to="/analisar" className="inline-flex items-center gap-1.5 rounded-full bg-violet-600 px-4 py-2 text-xs font-medium text-white hover:bg-violet-500">
-            <Sparkles size={14} /> Nova AnÃ¡lise
+            <Sparkles size={14} /> Nova Análise
           </Link>
         </div>
       </div>
@@ -683,7 +683,7 @@ function AnalysesPage() {
                     {analysis.status}
                   </span>
                 </div>
-                <p className="mt-2 text-sm text-zinc-400">{analysis.product} â€¢ {analysis.country} â€¢ {analysis.createdAt}</p>
+                <p className="mt-2 text-sm text-zinc-400">{analysis.product} • {analysis.country} • {analysis.createdAt}</p>
               </div>
               <div className="text-left md:text-right">
                 <p className="text-xs text-zinc-400">Score de Desempenho</p>
@@ -701,27 +701,27 @@ function AnalysisDetailPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const analysis = getAnalysisById(id || '');
-  if (!analysis) return <AppShell><div className="rounded-2xl border border-white/10 p-8 text-white"><h1 className="text-xl font-semibold">AnÃ¡lise nÃ£o encontrada</h1><p className="mt-2 text-zinc-400">Este registro nÃ£o existe no histÃ³rico deste navegador.</p><Link className="mt-4 inline-block text-violet-400" to="/analises">Voltar Ã s anÃ¡lises</Link></div></AppShell>;
+  if (!analysis) return <AppShell><div className="rounded-2xl border border-white/10 p-8 text-white"><h1 className="text-xl font-semibold">Análise não encontrada</h1><p className="mt-2 text-zinc-400">Este registro não existe no histórico deste navegador.</p><Link className="mt-4 inline-block text-violet-400" to="/analises">Voltar às análises</Link></div></AppShell>;
 
   return (
     <AppShell>
       <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
-          <Link to="/analises" className="text-xs text-violet-400 hover:underline">â† Voltar para anÃ¡lises</Link>
+          <Link to="/analises" className="text-xs text-violet-400 hover:underline">← Voltar para análises</Link>
           <h1 className="mt-2 text-3xl font-semibold text-white">{analysis.name}</h1>
-          <p className="text-sm text-zinc-400 mt-1">{analysis.product} â€¢ {analysis.country} â€¢ Criado em {analysis.createdAt}</p>
+          <p className="text-sm text-zinc-400 mt-1">{analysis.product} • {analysis.country} • Criado em {analysis.createdAt}</p>
         </div>
         <button
           onClick={() => navigate('/otimizacoes')}
           className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-violet-500"
         >
-          <Sparkles size={16} /> Otimizar este anÃºncio com IA
+          <Sparkles size={16} /> Otimizar este anúncio com IA
         </button>
       </div>
 
       <div className="grid gap-6 xl:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-2xl border border-white/10 bg-zinc-900 p-6">
-          <p className="text-xs font-medium uppercase tracking-wider text-zinc-400">SCORE GERAL DO ANÃšNCIO</p>
+          <p className="text-xs font-medium uppercase tracking-wider text-zinc-400">SCORE GERAL DO ANÚNCIO</p>
           <div className="mt-3 flex items-end gap-3">
             <span className="text-5xl font-bold text-violet-400">{analysis.score}</span>
             <span className="pb-2 text-xl text-zinc-400">/100</span>
@@ -744,7 +744,7 @@ function AnalysisDetailPage() {
 
         <div className="space-y-6">
           <div className="rounded-2xl border border-white/10 bg-zinc-900 p-6">
-            <h2 className="text-xl font-semibold text-white mb-3">Resumo da anÃ¡lise</h2>
+            <h2 className="text-xl font-semibold text-white mb-3">Resumo da análise</h2>
             <p className="text-zinc-300 text-sm leading-relaxed">{analysis.summary}</p>
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               <InfoPill label="Objetivo" value={analysis.objective} />
@@ -757,14 +757,14 @@ function AnalysisDetailPage() {
           {analysis.policyIssues && analysis.policyIssues.length > 0 && (
             <div className="rounded-2xl border border-amber-500/30 bg-amber-500/5 p-6">
               <h2 className="text-lg font-semibold text-amber-300 flex items-center gap-2 mb-3">
-                <AlertTriangle size={20} /> PossÃ­veis problemas de polÃ­tica (Meta / Google)
+                <AlertTriangle size={20} /> Possíveis problemas de política (Meta / Google)
               </h2>
               <div className="space-y-3">
                 {analysis.policyIssues.map((issue, idx) => (
                   <div key={idx} className="rounded-xl border border-white/10 bg-zinc-900/80 p-3 text-xs text-zinc-300 space-y-1">
                     <p><strong className="text-amber-400">Trecho auditado:</strong> "{issue.phrase}"</p>
                     <p><strong className="text-zinc-200">Motivo de risco:</strong> {issue.reason}</p>
-                    <p><strong className="text-emerald-400">SugestÃ£o segura:</strong> {issue.alternative}</p>
+                    <p><strong className="text-emerald-400">Sugestão segura:</strong> {issue.alternative}</p>
                   </div>
                 ))}
               </div>
@@ -786,7 +786,7 @@ function HistoryPage() {
   return (
     <AppShell>
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-semibold text-white">HistÃ³rico Completo de AnÃ¡lises</h1>
+        <h1 className="text-3xl font-semibold text-white">Histórico Completo de Análises</h1>
         <span className="text-xs text-zinc-400">Total: {analyses.length} registros</span>
       </div>
       <div className="space-y-4">
@@ -795,7 +795,7 @@ function HistoryPage() {
             <div className="flex justify-between items-center">
               <div>
                 <h3 className="font-semibold text-white text-lg">{item.name}</h3>
-                <p className="text-xs text-zinc-400 mt-1">{item.product} â€¢ Realizado em {item.createdAt}</p>
+                <p className="text-xs text-zinc-400 mt-1">{item.product} • Realizado em {item.createdAt}</p>
                 <p className="text-xs text-zinc-300 mt-2 line-clamp-2">{item.summary}</p>
               </div>
               <div className="text-right">
@@ -823,16 +823,16 @@ function OptimizationPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...headers },
         body: JSON.stringify({
-          adName: 'AnÃºncio Exemplo',
-          product: 'SaaS AutomaÃ§Ã£o',
+          adName: 'Anúncio Exemplo',
+          product: 'SaaS Automação',
           price: 'R$ 15,99',
           country: 'Brasil',
-          audience: 'Gestores de trÃ¡fego',
-          goal: 'ConversÃ£o',
+          audience: 'Gestores de tráfego',
+          goal: 'Conversão',
           dailyBudget: 'R$ 100',
           headline: 'Automatize seu funil com IA',
-          primaryText: 'Transforme leads em clientes com inteligÃªncia artificial.',
-          description: 'Software de automaÃ§Ã£o',
+          primaryText: 'Transforme leads em clientes com inteligência artificial.',
+          description: 'Software de automação',
           cta: 'Saiba mais'
         })
       });
@@ -840,8 +840,8 @@ function OptimizationPage() {
       if (data?.variants && Array.isArray(data.variants)) {
         setVariants(data.variants.map((v: any, idx: number) => ({
           id: String(idx + 1),
-          name: v.name || `VersÃ£o ${idx + 1}`,
-          angle: v.angle || v.focus || 'Foco em conversÃ£o',
+          name: v.name || `Versão ${idx + 1}`,
+          angle: v.angle || v.focus || 'Foco em conversão',
           headline: v.headline,
           primaryText: v.primaryText,
           description: v.description || '',
@@ -850,7 +850,7 @@ function OptimizationPage() {
         })));
       }
     } catch (e) {
-      console.error('Erro ao otimizar anÃºncio', e);
+      console.error('Erro ao otimizar anúncio', e);
     } finally {
       setLoading(false);
     }
@@ -865,14 +865,14 @@ function OptimizationPage() {
   return (
     <AppShell>
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-semibold text-white">OtimizaÃ§Ãµes com IA</h1>
+        <h1 className="text-3xl font-semibold text-white">Otimizações com IA</h1>
         <button
           onClick={generateNewVariants}
           disabled={loading}
           className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-violet-500 disabled:opacity-50"
         >
           {loading ? <RefreshCw size={16} className="animate-spin" /> : <Sparkles size={16} />}
-          Gerar Novas VariaÃ§Ãµes
+          Gerar Novas Variações
         </button>
       </div>
       <div className="grid gap-5 md:grid-cols-2">
@@ -923,7 +923,7 @@ function CampaignsPage() {
               <span className="rounded-full bg-white/5 px-2 py-1 text-xs text-zinc-200">{campaign.status}</span>
             </div>
             <div className="mt-5 space-y-3 text-sm text-zinc-300">
-              <div className="flex justify-between"><span>OrÃ§amento</span><span>{campaign.budget}</span></div>
+              <div className="flex justify-between"><span>Orçamento</span><span>{campaign.budget}</span></div>
               <div className="flex justify-between"><span>Gasto</span><span>{campaign.spend}</span></div>
               <div className="flex justify-between"><span>ROAS</span><span>{campaign.roas}</span></div>
             </div>
@@ -940,21 +940,21 @@ function ResultsPage() {
       <h1 className="text-3xl font-semibold text-white">Resultados reais</h1>
       <div className="mt-6 grid gap-6 xl:grid-cols-2">
         <div className="rounded-2xl border border-white/10 bg-zinc-900 p-6">
-          <h2 className="text-xl font-semibold text-white">PrevisÃ£o x resultado</h2>
+          <h2 className="text-xl font-semibold text-white">Previsão x resultado</h2>
           <div className="mt-6 space-y-4 text-sm text-zinc-300">
             <ComparisonRow label="CTR" forecast="2,1%" actual="2,8%" />
             <ComparisonRow label="CPC" forecast="R$ 0,90" actual="R$ 0,64" />
-            <ComparisonRow label="ConversÃ£o" forecast="3,2%" actual="4,1%" />
+            <ComparisonRow label="Conversão" forecast="3,2%" actual="4,1%" />
             <ComparisonRow label="CPA" forecast="R$ 18" actual="R$ 14" />
           </div>
         </div>
         <div className="rounded-2xl border border-white/10 bg-zinc-900 p-6">
-          <h2 className="text-xl font-semibold text-white">AnÃ¡lise do resultado</h2>
-          <p className="mt-4 text-zinc-300">Seu CTR ficou acima da estimativa, indicando que o criativo e o hook tiveram bom desempenho. Entretanto, a conversÃ£o ficou abaixo da estimativa. Uma possÃ­vel hipÃ³tese Ã© que exista uma perda de eficiÃªncia entre o clique e a landing page.</p>
+          <h2 className="text-xl font-semibold text-white">Análise do resultado</h2>
+          <p className="mt-4 text-zinc-300">Seu CTR ficou acima da estimativa, indicando que o criativo e o hook tiveram bom desempenho. Entretanto, a conversão ficou abaixo da estimativa. Uma possível hipótese é que exista uma perda de eficiência entre o clique e a landing page.</p>
           <div className="mt-5 space-y-3 text-sm text-zinc-300">
-            <p>â€¢ O que funcionou: hook e mensagem principal.</p>
-            <p>â€¢ O que ficou abaixo do esperado: conversÃ£o final.</p>
-            <p>â€¢ O que testar: headline, oferta e clareza da landing page.</p>
+            <p>• O que funcionou: hook e mensagem principal.</p>
+            <p>• O que ficou abaixo do esperado: conversão final.</p>
+            <p>• O que testar: headline, oferta e clareza da landing page.</p>
           </div>
         </div>
       </div>
@@ -972,7 +972,7 @@ function PlansPage() {
             <p className="text-sm uppercase tracking-[0.18em] text-zinc-400">{plan.name}</p>
             <div className="mt-2 flex items-end gap-2">
               <span className="text-3xl font-bold text-white">{plan.price}</span>
-              <span className="pb-1 text-sm text-zinc-400">/ mÃªs</span>
+              <span className="pb-1 text-sm text-zinc-400">/ mês</span>
             </div>
             <ul className="mt-5 space-y-3 text-sm text-zinc-300">
               {plan.features.map((feature) => (
@@ -1020,7 +1020,7 @@ function CheckoutPage() {
       }
       setResult(data);
     } catch (err: any) {
-      setError(err.message || 'Erro ao processar requisiÃ§Ã£o');
+      setError(err.message || 'Erro ao processar requisição');
     } finally {
       setLoading(false);
     }
@@ -1063,12 +1063,12 @@ function CheckoutPage() {
           <div className="rounded-2xl border border-violet-500/30 bg-violet-500/5 p-4 flex justify-between items-center">
             <div>
               <p className="font-medium text-white">{currentPlan.name} (Mensal)</p>
-              <p className="text-xs text-zinc-400">CobranÃ§a recorrente via Pix</p>
+              <p className="text-xs text-zinc-400">Cobrança recorrente via Pix</p>
             </div>
             <span className="text-xl font-bold text-violet-400">{currentPlan.formatted}</span>
           </div>
 
-          <p className="text-sm text-zinc-400">Seus dados de cadastro serÃ£o usados automaticamente para gerar o Pix. Nenhum formulÃ¡rio adicional.</p>
+          <p className="text-sm text-zinc-400">Seus dados de cadastro serão usados automaticamente para gerar o Pix. Nenhum formulário adicional.</p>
 
           {error && (
             <div className="rounded-xl border border-red-500/30 bg-red-500/10 p-3 text-sm text-red-300">
@@ -1090,7 +1090,7 @@ function CheckoutPage() {
         {result && (
           <div className="mt-6 rounded-2xl border border-green-500/30 bg-green-500/5 p-5 space-y-4">
             <div className="flex items-center justify-between">
-              <span className="text-sm font-semibold text-green-400">Pix gerado â€” aguardando pagamento</span>
+              <span className="text-sm font-semibold text-green-400">Pix gerado — aguardando pagamento</span>
               <span className="text-xs rounded-full bg-green-500/20 px-2.5 py-1 text-green-300 font-mono">{result.status}</span>
             </div>
 
@@ -1101,7 +1101,7 @@ function CheckoutPage() {
             )}
 
             <div>
-              <label className="block text-xs text-zinc-400 mb-1">CÃ³digo Copia e Cola (Pix)</label>
+              <label className="block text-xs text-zinc-400 mb-1">Código Copia e Cola (Pix)</label>
               <div className="flex gap-2">
                 <input
                   type="text"
@@ -1119,7 +1119,7 @@ function CheckoutPage() {
             </div>
 
             <div className="text-xs text-zinc-400 space-y-1 border-t border-white/10 pt-3">
-              <p><strong className="text-zinc-300">ID da TransaÃ§Ã£o:</strong> {result.transactionId}</p>
+              <p><strong className="text-zinc-300">ID da Transação:</strong> {result.transactionId}</p>
               <p><strong className="text-zinc-300">ID da Assinatura:</strong> {result.subscription?.id}</p>
               <p><strong className="text-zinc-300">Periodicidade:</strong> A cada {result.subscription?.periodicity} {result.subscription?.periodicityType}</p>
               {result.pix?.expiresAt && (
@@ -1134,11 +1134,11 @@ function CheckoutPage() {
 }
 
 function TermsPage() {
-  return <StaticPage title="Termos de uso" body="A plataforma oferece anÃ¡lise, estimativas de anÃºncios e recomendaÃ§Ãµes para melhorar campanhas antes do lanÃ§amento. NÃ£o garante aprovaÃ§Ã£o pela Meta nem conversÃ£o." />;
+  return <StaticPage title="Termos de uso" body="A plataforma oferece análise, estimativas de anúncios e recomendações para melhorar campanhas antes do lançamento. Não garante aprovação pela Meta nem conversão." />;
 }
 
 function PrivacyPage() {
-  return <StaticPage title="Privacidade" body="Os dados do usuÃ¡rio e das campanhas sÃ£o protegidos por autenticaÃ§Ã£o, autorizaÃ§Ã£o e regras de seguranÃ§a no backend e no Supabase." />;
+  return <StaticPage title="Privacidade" body="Os dados do usuário e das campanhas são protegidos por autenticação, autorização e regras de segurança no backend e no Supabase." />;
 }
 
 function StaticPage({ title, body }: { title: string; body: string }) {
@@ -1161,7 +1161,7 @@ function AppShell({ children }: { children: React.ReactNode }) {
             <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-violet-600/20 text-violet-300 ring-1 ring-violet-500/30">S</span>
             <div>
               <p className="text-lg font-semibold">SocialDash</p>
-              <p className="text-xs text-zinc-400">OperaÃ§Ã£o inteligente</p>
+              <p className="text-xs text-zinc-400">Operação inteligente</p>
             </div>
           </div>
           <nav className="space-y-2">
@@ -1173,8 +1173,8 @@ function AppShell({ children }: { children: React.ReactNode }) {
             ))}
           </nav>
           <div className="mt-8 rounded-2xl border border-white/10 bg-[#0f0f11] p-4">
-            <div className="flex items-center gap-2 text-violet-300"><Lock size={16} /> SessÃ£o segura</div>
-            <p className="mt-3 text-sm text-zinc-400">AtualizaÃ§Ã£o de sessÃ£o e autenticaÃ§Ã£o protegida pelo backend e Supabase.</p>
+            <div className="flex items-center gap-2 text-violet-300"><Lock size={16} /> Sessão segura</div>
+            <p className="mt-3 text-sm text-zinc-400">Atualização de sessão e autenticação protegida pelo backend e Supabase.</p>
           </div>
         </aside>
 
@@ -1189,7 +1189,7 @@ function AppShell({ children }: { children: React.ReactNode }) {
               <span className="text-zinc-200">Resumo</span>
             </div>
             <div className="flex items-center gap-3">
-              <button className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-zinc-200">NotificaÃ§Ãµes</button>
+              <button className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-zinc-200">Notificações</button>
               <Link to="/login" className="inline-flex items-center gap-2 rounded-full bg-violet-600 px-4 py-2 text-sm font-medium text-white hover:bg-violet-500"><LogIn size={16} /> Sair</Link>
             </div>
           </header>
