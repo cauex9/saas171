@@ -58,7 +58,7 @@ function LandingPage() {
           </nav>
           <div className="flex items-center gap-3">
             <Link to="/login" className="hidden rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-200 md:inline-flex">Entrar</Link>
-            <Link to="/register" className="inline-flex rounded-full bg-violet-600 px-5 py-2.5 text-sm font-medium text-white shadow-soft hover:bg-violet-500">Come�ar gr�tis</Link>
+            <Link to="/register" className="inline-flex rounded-full bg-violet-600 px-5 py-2.5 text-sm font-medium text-white shadow-soft hover:bg-violet-500">Começar grátis</Link>
           </div>
         </div>
       </header>
@@ -72,7 +72,7 @@ function LandingPage() {
               Analise seu criativo, copy, oferta e página de vendas com IA e receba sugestões para melhorar sua campanha antes de publicá-la.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Link to="/register" className="inline-flex items-center justify-center gap-2 rounded-full bg-violet-600 px-6 py-3 font-medium text-white shadow-soft hover:bg-violet-500">Come�ar gr�tis <ArrowRight size={18} /></Link>
+              <Link to="/register" className="inline-flex items-center justify-center gap-2 rounded-full bg-violet-600 px-6 py-3 font-medium text-white shadow-soft hover:bg-violet-500">Começar grátis <ArrowRight size={18} /></Link>
               <a href="#como-funciona" className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 font-medium text-zinc-100">Ver como funciona</a>
             </div>
             <div className="mt-10 flex items-center gap-8 text-sm text-zinc-400">
