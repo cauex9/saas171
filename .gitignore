@@ -1,0 +1,32 @@
+node_modules
+.env
+.env.local
+frontend/dist
+backend/dist
+*.log
+.DS_Store
+coverage
+.vite
+# Segredos e configurações locais
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Dependências
+node_modules/
+
+# Arquivos gerados
+dist/
+build/
+.next/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema e editor
+.DS_Store
+Thumbs.db
+.vscode/
